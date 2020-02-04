@@ -130,10 +130,10 @@ Make a Coin flipper:
 
 If done properly, you will likely have around half heads and half tails.
 '''
-heads = 1
+heads = 0
 tails = 0
 i = 1
-while i <= 99:
+while i <= 100:
     answer = (random.randrange(0, 2))
     if answer == 1:
         print("heads")

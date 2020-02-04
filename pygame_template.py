@@ -1,76 +1,54 @@
-"""
- Bounces a rectangle around the screen.
-
- Sample Python/Pygame Programs
- Simpson College Computer Science
- http://programarcadegames.com/
- http://simpson.edu/computer-science/
-
- Explanation video: http://youtu.be/-GmKoaX2iMs
-"""
-
 import pygame
+import random
+pygame.init()  # vroom vroom
 
-# Define some colors
+# Define some variables
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 GREEN = (0, 255, 0)
 RED = (255, 0, 0)
+BLUE = (0, 0, 255)
+YELLOW = (255, 255, 0)
+MAGENTA = (255, 0, 255)
+CYAN = (0, 255, 255)
+GRAY = (100, 100, 100)
+PINK = (255, 200, 200)
+ORANGE = (255, 150, 0)
+MAROON = (75, 0, 0)
 
-pygame.init()
+SCREEN_WIDTH = 700
+SCREEN_HEIGHT = 500
+done = False  # condition for game loop
 
-# Set the height and width of the screen
-size = [700, 500]
+# Set the width and height of the screen [width, height]
+size = (SCREEN_WIDTH, SCREEN_HEIGHT)
 screen = pygame.display.set_mode(size)
 
-pygame.display.set_caption("Bouncing Rectangle")
+pygame.display.set_caption("Raven's Game")
 
 # Loop until the user clicks the close button.
-done = False
 
 # Used to manage how fast the screen updates
-clock = pygame.time.Clock()
-
-# Starting position of the rectangle
-rect_x = 50
-rect_y = 50
-
-# Speed and direction of rectangle
-rect_change_x = 2
-rect_change_y = 2
+clock = pygame.time.Clock()  # creates a clock object that manages updates
 
 # -------- Main Program Loop -----------
 while not done:
-    # --- Event Processing
+    # --- Main event loop (input from user mouse, keyboard or controller)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             done = True
 
-    # --- Logic
-    # Move the rectangle starting point
-    rect_x += rect_change_x
-    rect_y += rect_change_y
+    # --- Game logic should go here
 
-    # Bounce the ball if needed
-    if rect_y > 450 or rect_y < 0:
-        rect_change_y = rect_change_y * -1
-    if rect_x > 650 or rect_x < 0:
-        rect_change_x = rect_change_x * -1
+    # ---- Drawing code goes here
+    screen.fill(WHITE)
 
-    # --- Drawing
-    # Set the screen background
-    screen.fill(BLACK)
+    pygame.display.flip()  # updates the screen
 
-    # Draw the rectangle
-    pygame.draw.rect(screen, WHITE, [rect_x, rect_y, 50, 50])
-    pygame.draw.rect(screen, RED, [rect_x + 10, rect_y + 10, 30, 30])
+    # --- Limit to 60 frames per second
+    clock.tick(60) # frames per second
 
-    # --- Wrap-up
-    # Limit to 60 frames per second
-    clock.tick(60)
-
-    # Go ahead and update the screen with what we've drawn.
-    pygame.display.flip()
-
-# Close everything down
+# Close the window and quit.
 pygame.quit()
+
+

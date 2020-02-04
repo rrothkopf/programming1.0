@@ -62,9 +62,9 @@ else:
 #  Problem 4 (2pts)
 #  Fix the following code.  There are three things wrong.
 
-x = int(input("Enter a number: "))
+x = float(input("Enter a number: "))
 if x == 3:
-       print("You entered 3")
+    print("You entered 3")
 
 ###################################
 #  Problem 5 (2pts)
@@ -72,9 +72,9 @@ if x == 3:
 
 answer = input("What does the W. In Francis W. Parker stand for?: ")
 if answer.upper() == "WAYLAND":
-     print("Correct!")
+    print("Correct!")
 else:
-      print("Incorrect! It is Wayland")
+    print("Incorrect! It is Wayland")
 
 #####################################
 #  Problem 6 (1pt)

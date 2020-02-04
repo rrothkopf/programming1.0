@@ -47,53 +47,53 @@ print (x + 10)
 print (x)
 x + 10 # has no effect
 
-x = x + 10 # you can use the variable itself when assigning value
-print (x)
+x = x + 10  # you can use the variable itself when assigning value
+print(x)
 
-x += 10 # does the same thing
-print (x)
+x += 10  # does the same thing
+print(x)
 
 # Variables
 x = 5
 X = 6
-print(x) # python is case sensitive
+print(x)  # python is case sensitive
 
 # python uses snake_case, not camelCase, PascalCase, or kebab-case.
 first_name = "Francis" # correct snake_case
 # first name = "Francis" # illegal (no spaces allowed!)
 # first.name = "Francis" # illegal (no dots allowed!)
 
-eight_ball = 8 # correct
+eight_ball = 8  # correct
 # 8ball = 8 # illegal (cannot start with a number)
-ball8 = 8 # this could also be correct
+ball8 = 8  # this could also be correct
 
 # Continued 9/10/10
 tax_percentage = .11
 # tax% = .11 # illegal, no special characters
 
 # CONSTANTS
-PI = 3.14 # constants are written with all caps
+PI = 3.14  # constants are written with all caps
 
 
 
 # Math Operators
-x = 3 + 5 - 2 # addition and subtraction
+x = 3 + 5 - 2  # addition and subtraction
 y = 4 * 3 / 4
-print (x, y)
+print(x, y)
 
 # floor operator // division that chops off the decimal remainder
-print (5 // 3)
-print (2 // 3)
+print(5 // 3)
+print(2 // 3)
 
 # power **
-print (3 ** 2)
-print (2 ** 8)
+print(3 ** 2)
+print(2 ** 8)
 
 # modulus % returns the remainder after division
-print (13/5)
-print (13 % 5)
-print (1872418 % 2) # odd/even check
-print (7 % 5)
+print(13/5)
+print(13 % 5)
+print(1872418 % 2) # odd/even check
+print(7 % 5)
 
 
 # These do not work in coding
@@ -126,7 +126,7 @@ name = input("What is your name")
 print("Nice to meet you", name)
 
 my_number = input("Enter a number: ")
-my_number = float(my_number) #casting it as an integer or float (changing the data type)
+my_number = float(my_number)  # casting it as an integer or float (changing the data type)
 print(my_number * 2)
 
 # improved calculator
